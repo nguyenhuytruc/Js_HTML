@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sở Thích Của Bạn</title>
+</head>
+<body>
+    <form action=" http://demo.codegym.vn/6/registration_form/register.php" method="post">
+        <table>
+            <Caption style="color: white; background-color:coral">Sở thích của bạn</Caption>
+            <tbody>
+                <tr>
+                    <th style="color: blue;">Họ Và Tên</th>
+                    <th colspan="3"><input type="text" name="name"></th>
+                </tr>
+                <tr>
+                    <th style="color: blue;">Email</th>
+                    <th colspan="3"><input type="text" name="email"></th>
+                </tr>
+                <tr>
+                    <th rowspan="3"; style="color: blue;">Sở thích</th>
+                    <td style="color: orange;"><input type="checkbox">Thể thao</td>
+                    <td style="color: orange;"><input type="checkbox">Âm nhạc</td>
+                    <td style="color: orange;"><input type="checkbox">Đọc sách</td>
+                </tr>
+                <tr>
+                    <td style="color: orange;"><input type="checkbox">Lướt web</td>
+                    <td style="color: orange;"><input type="checkbox">Chơi game</td>
+                    <td style="color: orange;"><input type="checkbox">Điện ảnh</td>
+                </tr>
+                <tr>
+                    <td style="color: orange;"><input type="checkbox">Du lịch</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th><input type="submit" name="submit" value="Gửi thông tin"></th>
+                    <th><input type="reset" value="Nhập lại"></th>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>
