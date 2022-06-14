@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <script>
+        let userName = prompt('Nhập ID');
+        if (userName == 'Huy Trúc'){
+            let pass = prompt('Nhập Pass');
+            if (pass == '123456'){
+                alert('Chào Trúc');
+            } else if (pass == null) {
+                alert('Không hợp lệ');
+            } else {
+                alert('MK Sai');
+            }
+        } else if (userName == null) {
+            alert('Không hợp lệ');
+        } else {
+            alert('Không phải Trúc');
+        }
+    </script>
+</body>
+</html>
