@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+    <div calss="container">
+        <table>
+            <tr>
+                <td>
+                    <label for="dntt">Điện năng tiêu thụ(KWh)</label>
+                </td>
+                <td>
+                    <input autofocus class="form-control" type="number" id="dntt" oninput="process()">  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="b1">Bậc 1</label>
+                </td>
+                <td>
+                    <input class="from-control" type="text" id="b1" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="b2">Bậc 2</label>
+                </td>
+                <td>
+                   
+                     <input class="from-control" type="=text" id="b2" readonly> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="b3">Bậc 3</label>
+                </td>
+                <td>
+                     <input class="from-control" type="=text" id="b3" readonly> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="b4">Bậc 4</label>
+                </td>
+                <td>
+                     <input class="from-control" type="=text" id="b4" readonly> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="b5">Bậc 5</label>
+                </td>
+                <td>
+                     <input class="from-control" type="=text" id="b5" readonly> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="b6">Bậc 6</label>
+                </td>
+                <td>
+                     <input class="from-control" type="=text" id="b6" readonly> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tong">Tổng tiền</label> 
+                </td>
+                <td>
+                    <input class="from-control" type="=text" id="tong" readonly> 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="btn" onclick="process()">Process</button>
+                    <button class="btn" onclick="cancel()">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="tinhtiendien.js"></script>
+</body>
+</html>
