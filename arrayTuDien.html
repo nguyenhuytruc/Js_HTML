@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+<body>
+    <label for="string">Nhập từ</label>
+    <input type="text" id="string">
+    <button onclick="transcript()">Dịch</button>
+    <p id="result"></p>
+    <script>
+        function transcript(){
+            let eng = ['car', 'fish', 'bird', 'bear',];
+            let vie = ['xe', 'cá', 'chim', 'gấu'];
+            let string = document.getElementById("string").value;
+            let index = 0;
+            let result = "";
+            for (let i = 0; i < eng.length; i++){
+                if (string == eng[i]){
+                    index = i;
+                    for (let j = 0; j < vie.length; j++){
+                        if (index == j){
+                            result = vie[j];
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
