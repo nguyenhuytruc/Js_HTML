@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+
+<body>
+    <h4>Bài 1</h4>
+    <script>
+        let car = ['toyota', 'honda', 'suzuki', 'kia'];
+        document.write(car.toString());
+    </script>
+
+    <h4>Bài 2</h4>
+    <script>
+        let number = Number(prompt('Nhập một dãy số'));
+        let str = number.toString();
+        let result = [str[0]];
+        for (let i = 1; i < str.length; i++) {
+            if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) {
+                result.push('-', str[i]);
+            } else {
+                result.push(str[i]);
+            }
+        }
+        document.write(result.join(''));
+    </script>
+
+    <h4>BÀI 3</h4>
+    <Script>
+        let up_low = 'My Name Nguyen Huy Truc';
+        let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let lower = 'abcdefghijklmnopqrstuvwxyz';
+        let kq = [];
+        for (let i = 0; i < up_low.length; i++) {
+            if (upper.indexOf(up_low[i]) !== -1) {
+                kq.push(up_low[i].toLowerCase())}
+             else if (lower.indexOf(up_low[i]) !== -1) {
+                kq.push(up_low[i].toUpperCase());
+                }
+            else{
+                kq.push(up_low[i]);
+            }
+        }
+        document.write(kq.join(''));
+    </Script>
+</body>
+
+</html>
