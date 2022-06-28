@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập và sử dụng hàm 1</title>
+</head>
+
+<body>
+    <!-- Bài 1 -->
+    <script>
+        alert("Xin Chào");
+    </script>
+
+    <h5>Bài 2:</h5>
+    <script>
+        let number = Number(prompt("Enter number: "));
+        function numberPlus(number) {
+            number += 1;
+            return number;
+        }
+        document.write(`${numberPlus(number)} là giá trị mới`);
+    </script>
+
+    <h5>Bài 3:</h5>
+    <script>
+        let number_1 = Number(prompt("Nhập giá trị thứ nhất: "));
+        let number_2 = Number(prompt("Nhập giá trị thứ hai: "));
+        function parameters(number_1, number_2) {
+            if (number_1 > number_2) {
+                document.write(`${number_1} lớn hơn ${number_2}`);
+                return;
+            } {
+                total = number_1 + number_2;
+                document.write(`Tổng hai số là: ${total}`);
+            }
+        }
+        parameters(number_1, number_2);
+    </script>
+
+    <h5>Bài 4</h5>
+    <script>
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            alert(`${result} sau khi gọi hàm`);
+            return result;
+        }
+        result = 0;
+        alert(`${result} trước khi gọi hàm`);
+        result = addNumbers(); 
+    </script>
+
+    <h5>Bài 5</h5>
+    <script>
+        let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+
+        function check_star(star) {
+            let index_star1 = 0;
+            let result = "";
+            for (let i = 0; i < star1.length; i++) {
+                if (star == star1[i]) {
+                    index_star1 = i;
+                    for (let j = 0; j < star2.length; j++) {
+                        if (index_star1 == j) {
+                            result = star2[j];
+                            return result;
+                        } else {
+                            result = "Không tìm thấy chòm sao"
+                            return result;
+                        }
+                    }
+                } else {
+                    result = "Không tìm thấy sao";
+                    return result;
+                }
+            }
+
+        }
+        let star = prompt("Nhập vào ngôi sao: ")
+        document.write(check_star(star));
+    </script>
+</body>
+
+</html>
