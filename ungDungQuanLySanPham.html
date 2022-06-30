@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-name{
+            border-style: solid;
+            border-color: red;
+            border-width: 1px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add New product</h1>
+    <input id="ipProductName" />
+    <button onclick="addProduct()">Add Product</button>
+    <table>
+        <th>Product Name</th>
+        <tbody id="table_body"></tbody>
+    </table>
+
+    <script>
+        let products = ["iPhone 8", "iPhone X", "iPhone 11", "iPhone 12", "iPhone 13"];
+        function renderProducts() {
+            let tableBody = document.getElementById("table_body");
+            tableBody.innerHTML = "";
+            for (let i = 0; i < products.length; i++) {
+                let productName = products[i];
+                tableBody.innerHTML += `<tr id="tr_${i}">
+                    <td>${productName}</td>
+                    <td><button onclick="editProduct(${i})">Edit</button></td>
+                    <td><button onclick="deleteProduct(${i})">Delete</button></td>
+                    </tr>`;
+            }
+        }
+        let rowFormat = `<tr id = "tr_{0}>
+            <td>{1}</td>
+            <td><button onclick="editProduct({0})">Edit</button></td>
+            <td><button onclick="deleteProduct({0})">Delete</button></td>
+            </tr>`
+        function addProduct() {
+            let ipProductNameTag = document.getElementById("ipProductName");
+            let productName = ipProductName.value;
+            if (productName.length > 0) {
+                products.push(productName);
+                renderProducts()
+                ipProductName.value = "";
+            } else
+                ipProductNameTag.classList.add("product-name");
+        }
+
+        function editProduct(index) {
+            let trTag = document.getElementById(`tr_${index}`);
+            trTag.innerHTML = `<td>
+            <input id="ip_edit_${index}"/>
+        </td>
+        <td>
+            <button onclick="save(${index})">Save</button>
+        </td>
+        <td>
+            <button onclick="cancel(${index})">Cancel</button>
+        </td>`;
+              
+        }
+        function save(index) {
+            let ipEditTag = document.getElementById(`ip_edit_${index}`);
+            let productName = ipEditTag.value;
+            products[index] = ipEditTag.value;
+
+            let trTag = document.getElementById(`tr_${index}`);
+            trTag.innerHTML =
+                `<td >${productName}</td>
+        <td><button onclick="editProduct(${index})">Edit</button></td>
+        <td><button onclick="deleteProduct(${index})">Delete</button></td>`
+        }
+        function cancel(index) {
+            let trTag = document.getElementById(`tr_${index}`);
+            let productName = products[index];
+            trTag.innerHTML =
+                `<td >${productName}</td>
+    <td><button onclick="editProduct(${index})">Edit</button></td>
+    <td><button onclick="deleteProduct(${index})">Delete</button></td>`
+        }
+        function deleteProduct(index) {
+            products.splice(index, 1);
+            renderProducts();
+        }
+        renderProducts();
+    </script>
+</body>
+</html>

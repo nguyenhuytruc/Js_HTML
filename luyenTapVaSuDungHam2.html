@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập và sử dụng hàm 2</title>
+</head>
+<body>
+    <h5>Bài 1:</h5>
+    <script>
+        let number = Number(prompt("Nhập vào một số"));
+        function square(number){
+            resultSquare = number ** 2;
+            return resultSquare;
+        }
+        document.write(`Bình phương của ${number} là ${square(number)}`);
+    </script>
+
+    <h5>Bài 2:</h5>
+    <script>
+        let r = Number(prompt("Nhập bán kính: "));
+        let pi = 3.14;
+        function area(r){
+            resultArea = r * r * pi;
+            return resultArea;
+        }
+        document.write(`Diện tích hình tròn là: ${area(r)}<br>`);
+        function circuit(r){
+            resultCircuit = r * 2 * pi;
+            return resultCircuit;
+        }
+        document.write(`Chu vi hình tròn là: ${circuit(r)}`);
+    </script>
+
+    <h5>Bài 3:</h5>
+    <script>
+        let n = Number(prompt("Nhập số nguyên để tính giai thừa: "));
+        function factorial(n){
+            let product = 1
+            for (let i = 1; i <=n;i++){
+                product = product * i;
+            }
+            return product;
+        }
+        document.write(`Giai thừa của ${n} là ${factorial(n)}`);
+    </script>
+</body>
+</html>
